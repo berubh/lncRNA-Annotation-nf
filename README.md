@@ -16,7 +16,7 @@ Install the Nextflow runtime by running the following command:
 
 When done, you can launch the pipeline execution with Docker by entering the command shown below:
 
-    $ nextflow run skptic/lncRNA-Annotation-nf -profile test
+    $ nextflow run cbcrg/lncRNA-Annotation-nf -profile test
 
 By default the pipeline is executed against the provided example dataset. 
 Check the *Pipeline parameters*  section below to see how enter your data on the program 
