@@ -249,8 +249,8 @@ process FEELnc_filter{
  
         FEELnc_filter.pl --infile ${cuffmergeDir}/merged.gtf \
                          --mRNAfile ${annotationFile} \
-                         ${FEELnc_filter_options} \
                          --proc ${task.cpus} \
+                         ${params.feelnc_opts} \
                          > FEELnc_filter/merged_filtered.gtf
     
     """
