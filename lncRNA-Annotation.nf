@@ -33,7 +33,7 @@ params.genome        ="$baseDir/tutorial/genome/genome_chr38.fa"
 params.annotation    ="$baseDir/tutorial/annotation/annotation_chr38.gtf"
 params.reads         ="$baseDir/tutorial/reads/*_{1,2}.fastq"
 params.overhang      ='99'
-params.feelnc_opts   = "--biotype transcript_biotype=protein_coding \\ --monoex -1 \\"
+params.feelnc_opts   = "--biotype transcript_biotype=protein_coding --monoex -1 "
 params.output        ="results/"
 
 
