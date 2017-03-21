@@ -112,7 +112,7 @@ process mapping {
     tag "reads: $name"
 
     input:
-    file STARgenome from STARgenomeIndex.first()
+    file STARgenome from STARgenomeIndex
     set val(name), file(reads:'*') from read_files
 
     output:
@@ -175,7 +175,7 @@ process cufflinks_postprocess {
 
     input:
     set val(name), file(CUFFLINKS_transcripts) from cufflinksTranscripts_to_pp
-    file (genomeLength) from genomeLengths.first()
+    file (genomeLength) from genomeLengths
 
     output:
     file "${name}_cufflinks_ok.gtf" into cufflinksTranscripts_postprocess, cufflinksTranscripts_postprocess_fn
@@ -210,7 +210,7 @@ process cuffmerge {
     file annotationFile
     file genomeFile
     file gtf_filenames from GTFfilenames
-    file cufflinks_ok from cufflinksTranscripts_postprocess.toList()
+    file cufflinks_ok from cufflinksTranscripts_postprocess.collect()
 
     output:
     file "CUFFMERGE" into cuffmergeTranscripts
